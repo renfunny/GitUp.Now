@@ -1,0 +1,22 @@
+.card{
+    margin: 50px 0px;
+    padding: 10px;
+}
+
+/*
+TO-DO:
+- Fill each card with each personals personal data and images
+- Add simple animation
+- animation ideas include pop up links in the form of clickable buttons,
+slide all content up to make space for links,
+extended portion follows color scheme, etc
+
+
+USE THIS *in the body* TO FIX ICON ISSUE
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 5px;
+
+
+
+*/
