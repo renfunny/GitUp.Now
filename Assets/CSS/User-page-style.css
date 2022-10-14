@@ -109,3 +109,7 @@ iframe {
   background-color: orange;
   color: #ddd;
 }
+.close-custm {
+  text-align: right;
+  padding: 0.2rem 0.5rem 0.2rem 0.2rem;
+}

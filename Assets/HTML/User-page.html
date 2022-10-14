@@ -36,7 +36,6 @@
           <div>
             <p><a href="#">Workout Maker</a></p>
           </div>
-          <!-- <div id="drop-nav"> -->
           <div id="ul">
             <ul>
               <li>
@@ -61,11 +60,6 @@
               </li>
             </ul>
           </div>
-          <!-- 
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i> -->
-
-          <!-- </div> -->
         </nav>
       </header>
       <section class="profile">
@@ -94,68 +88,72 @@
         <div class="row row-cols-1 row-cols-md-3 g-4 card-custom">
           <div class="col">
             <div class="card h-100 card-custm">
+              <span class="close close-custm">x</span>
               <iframe
                 src="https://www.youtube.com/embed/tgbNymZ7vqY"
                 class="card-img-top"
               >
               </iframe>
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
+                <h5 class="card-title">Exercise Name</h5>
+                <ul>
+                  <li>Target Muscle</li>
+                  <li>Dificulty</li>
+                </ul>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card h-100 card-custm">
+              <span class="close close-custm">x</span>
               <iframe
                 src="https://www.youtube.com/embed/tgbNymZ7vqY"
                 class="card-img-top"
               >
               </iframe>
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a short card.</p>
+                <h5 class="card-title">Exercise Name</h5>
+                <ul>
+                  <li>Target Muscle</li>
+                  <li>Dificulty</li>
+                </ul>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card h-100 card-custm">
+              <span class="close close-custm">x</span>
               <iframe
                 src="https://www.youtube.com/embed/tgbNymZ7vqY"
                 class="card-img-top"
               >
               </iframe>
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content.
-                </p>
+                <h5 class="card-title">Exercise Name</h5>
+                <ul>
+                  <li>Target Muscle</li>
+                  <li>Dificulty</li>
+                </ul>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card h-100 card-custm">
+              <span class="close close-custm">x</span>
               <iframe
                 src="https://www.youtube.com/embed/tgbNymZ7vqY"
                 class="card-img-top"
               >
               </iframe>
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
+                <h5 class="card-title">Exercise Name</h5>
+                <ul>
+                  <li>Target Muscle</li>
+                  <li>Dificulty</li>
+                </ul>
               </div>
             </div>
           </div>
-        </div>
       </section>
     </main>
     <script
@@ -163,5 +161,14 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
+    <script>
+      
+      var closebtns = document.querySelectorAll(`.close`)
+      for(let i = 0; i<closebtns.length; i++){
+        closebtns[i].addEventListener(`click`, function(){
+this.parentElement.style.display = `none`;
+        })
+      }
+    </script>
   </body>
 </html>
