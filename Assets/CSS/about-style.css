@@ -90,7 +90,7 @@ body {
   column-gap: 5px;
   align-items: center;
   justify-content: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: Poppins;
   height: 100vh;
   margin: 0;
   padding: 0;
@@ -104,11 +104,14 @@ body {
 }
 .container {
   position: relative;
-  height: 500px;
+  height: 450px;
   width: 400px;
   overflow: hidden;
   box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
   transition: box-shadow 0.3s ease-out;
+  border-radius: 5%;
+  margin-bottom: 25px;
+  margin-top: 25px;
 }
 
 .container:hover {
@@ -126,12 +129,8 @@ body {
   z-index: 2;
 }
 
-.img-container:hover {
-	cursor: pointer;
-}
-
 .container:hover .img-container {
-	transform: translateY(-100px);
+	transform: translateY(-90px);
 }
 
 .img-container > img {
@@ -163,9 +162,9 @@ body {
   display: block;
   height: 50px;
   width: 50px;
-  background-color: #FFF;
+  background-color: orange;
   text-align: center;
-  color: #262626;
+  color: black;
   margin: 0 5px;
   border-radius: 50%;
   opacity: 0;
@@ -178,41 +177,59 @@ body {
   opacity: 1;
 }
 
-.social-media > li > a > .fa {
+.social-media > li > a > .icon {
   font-size: 24px;
   line-height: 50px;
   transition: transform 0.3s ease-out;
 }
 
-.social-media > li > a:hover > .fa {
+.social-media > li > a:hover > .icon {
   transform: rotateY(360deg);
 }
 
+img{
+  width: 100%;
+  height: auto;
+}
+
+img.icon-linkedin{
+  width: 20px;
+  height: 20px; 
+
+}
+
+img.icon-instagram{
+  width: 30px;
+  height: 30px; 
+
+}
+
+img.icon-GitHub{
+  width: 30px;
+  height: 30px; 
+
+}
+
+
+
 .container:hover .social-media li:nth-child(1) a {
-	transition-delay: 0s;
+	transition-delay: 0.15s;
 }
 
 .container:hover .social-media li:nth-child(2) a {
-	transition-delay: 0.1s;
-}
-
-.container:hover .social-media li:nth-child(3) a {
-	transition-delay: 0.2s;
-}
-
-.container:hover .social-media li:nth-child(4) a {
 	transition-delay: 0.3s;
 }
 
-.container:hover .social-media li:nth-child(5) a {
-	transition-delay: 0.4s;
+.container:hover .social-media li:nth-child(3) a {
+	transition-delay: 0.45s;
 }
 
 .user-info {
   position: absolute;
 	bottom: 0;
 	left: 0;
-	background-color: #FFF;
+	background-color: orange;
+  color: black;
 	height: 100px;
 	width: 100%;
 	box-sizing: border-box;
@@ -226,15 +243,18 @@ body {
 }
 
 .user-info > span {
-  color: #262626;
   font-size: 16px;
+}
+
+@media (max-width: 691px){
+  .containers{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
 }
 /*
 TO-DO:
-- Fill each card with each personals personal data and images instead of the current placeholders
-- Make avatars/get personal pictures for each container/card
-- Apply project theme to elements
-- Apply font style
-- improve design of cards/containers
-
+- fix image position issue in icons in social media
+- find a way to change the icon img color on hover
 */
