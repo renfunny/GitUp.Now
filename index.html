@@ -23,8 +23,7 @@
                     <div id="ul">
                     <ul>
                         <li>
-                            <a href="./Assets/HTML/about.html">Contact Us</a>
-
+                            <a href="#">About Us</a>
                         </li>
                         <li>
                             <a href="#"> Our Team</a>
@@ -69,44 +68,44 @@
         <div id="form-div">
             <form>
                 <div id="name-input-div" class="input-fields-div">
-                <label>Full Name</label>
-                <input type="text" name="full name">
+                <label for="name-input">Full Name</label>
+                <input id="name-input" type="text" name="full name" required>
             </div>
 
             <div id="email-input-div" class="input-fields-div">
-                <label>Email ADDRESS</label>
-                <input type="email" name="email">
+                <label for="email-input">Email Address</label>
+                <input id="email-input" type="email" name="email" required>
             </div>
 
-            <div id="muscle-input-div" class="input-fields-div">
+            <div id="muscle-input-div" class="input-fields-div" >
                 <label>What Muscle Group Would You Like To target?</label>
                 
                 <div class="checkbox-div" id="checkbox-div">
                     <div class="checkbox-input-div">
-                        <input type="checkbox" name="msucle input"><label>Chest</label>
+                        <input type="checkbox" name="msucle input" id="chest" class="checkbox-value" value="Chest"><label class="label" for="chest">Chest</label>
                     </div>
 
                     <div class="checkbox-input-div">
-                        <input type="checkbox" name="msucle input"><label>Back</label>
+                        <input type="checkbox" name="msucle input" id="back" class="checkbox-value" value="Back"><label class="label" for="back">Back</label>
                     </div>
 
                     <div class="checkbox-input-div">
-                        <input type="checkbox" name="msucle input"><label>Biceps</label>
+                        <input type="checkbox" name="msucle input" id="biceps" class="checkbox-value" value="Biceps"><label class="label" for="biceps">Biceps</label>
                     </div>
                  </div>
 
                 <div class="checkbox-div">
                 
                     <div class="checkbox-input-div">
-                        <input type="checkbox" name="msucle input"><label>Triceps</label>
+                        <input type="checkbox" name="msucle input" id="triceps" class="checkbox-value" value="Triceps"><label class="label" for="triceps">Triceps</label>
                     </div>
 
                     <div class="checkbox-input-div">
-                        <input class ="checkbox"type="checkbox" name="msucle input"><label>Legs</label>
+                        <input type="checkbox" name="msucle input" id="legs" class="checkbox-value" value="Legs"><label class="label" for="legs">Legs</label>
                     </div>
 
                     <div class="checkbox-input-div">
-                        <input type="checkbox" name="msucle input"><label>Shoulders</label>
+                        <input type="checkbox" name="msucle input" id="shoulders" class="checkbox-value" value="Shoulders"><label class="label" for="shoulders">Shoulders</label>
                     </div>
 
                 </div>
