@@ -194,20 +194,23 @@ img{
 
 img.icon-linkedin{
   width: 20px;
-  height: 20px; 
-
+  height: 20px;
+  position: relative;
+  top: 20%; 
 }
 
 img.icon-instagram{
   width: 30px;
   height: 30px; 
-
+  position: relative;
+  top: 20%;
 }
 
 img.icon-GitHub{
   width: 30px;
   height: 30px; 
-
+  position: relative;
+  top: 20%;
 }
 
 
