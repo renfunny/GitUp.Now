@@ -16,6 +16,3 @@ starBtn.addEventListener("click", function () {
 icon.addEventListener("click", function () {
   formSection.setAttribute("style", "display:none;");
 });
-
-var userName = document.querySelector(`.full-name`);
-var userEmail = document.querySelector(`.email`);
