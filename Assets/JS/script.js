@@ -68,12 +68,11 @@ formBtn.addEventListener("click", function(event){
 //         nameInputDiv.appendChild(nameError);
 //         console.log(nameError);
     
-//     }else{
-//         nameError.setAttribute("style", "display:none;");
-//     }
-
-//     if(emailInput.value= " " || emailInput.value == !includes("@") ){
-
+//         }
+        
+        
+//         if(emailInput.value= " " || emailInput.value == !includes("@") ){
+ 
 //         var emailInputDiv= document.getElementById("email-input-div");
 
 //         var emailError=  document.createElement("p");
@@ -82,7 +81,13 @@ formBtn.addEventListener("click", function(event){
 
 //         emailInputDiv.appendChild(emailError);
 //     }else{
-//         emailError.setAttribute("style","display:none;");
+//         var checkboxDiv= document.querySelector(".checkboxDiv");
+//         var successMsg= document.createElement("p");
+//         successMsg.innerHTML="Your Form is Successfully Submit";
+
+//         checkboxDiv.appendChild(successMsg);
+
+//         console.log(successMsg);
 //     }
 //    }
 
