@@ -26,13 +26,24 @@ main {
     justify-content: left;
     padding: 30px;
     background: black;
-    color: #fff;
+    color: white;
+}
+
+.main-header a:visited{
+    color:orange;
+    text-decoration: none;
+}
+.main-header a:hover{
+    color:orange;
+    text-decoration: none;    
+    cursor: pointer;
 }
 
 section.card {
-border: orange;
-border-style: solid;
-border-width: 1px;
+  border: orange;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
 }
 
 .card {
@@ -41,17 +52,22 @@ border-width: 1px;
     text-align: center;
     border-style: solid;
     border-width: 1px;
+    cursor: pointer;
 }
   
 .card header {
-    padding: 20px;
-    background: black;
-    color: #fff;
+    text-decoration: none;
+    color: orange;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
 }
   
 .card img {
     width: 100%;
     min-width: 400px;
+    cursor: pointer;
 }
 
 p {
@@ -74,10 +90,10 @@ p {
 header nav p a{
     text-decoration: none;
     color: orange;
-    cursor: pointer;
     font-size: 25px;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 2px;    
+    cursor: pointer;
 }
 
 /* added display as flex and also added some column gap beside that I have also set a font size and weight and remove the list style*/
@@ -87,7 +103,6 @@ header div ul{
     column-gap: 50px;
     list-style-type: none;
     font-weight: 600;
-    
 }
 
 /* added a color to a tag under ul header and removed the text decoration also added hover and active color */
@@ -97,12 +112,15 @@ header  nav ul a{
     letter-spacing: 3px;
     text-decoration: none;
     color: white;
+    cursor: pointer;
 } 
 
 header nav ul a:hover{
     color:orange;
-    text-decoration: none;
+    text-decoration: none;    
+    cursor: pointer;
 }
+
 header nav div ul:active{
     color:orange;
 }
