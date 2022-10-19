@@ -25,4 +25,4 @@ Our Team page:
 
 ## Deployment
 
-A live demo of this application can be found here: 
+A live demo of this application can be found here: https://renfunny.github.io/GitUp.Now/
