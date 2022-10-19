@@ -1,155 +1,176 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-html{
-    background-color: black;
-    font-family: poppins;
-} 
+html {
+  background-color: black;
+  font-family: poppins;
+}
 
 body {
-    font-family: Arial;
-    margin: 0;
+  font-family: Arial;
+  margin: 0;
 }
-  
+
 main {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2%;
+  justify-content: space-between;
 }
-  
+
 .main-header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    padding: 30px;
-    background: black;
-    color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  padding: 30px;
+  background: black;
+  color: white;
+}
+
+.main-header a:visited {
+  color: orange;
+  text-decoration: none;
+}
+.main-header a:hover {
+  color: orange;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 section.card {
-border: orange;
-border-style: solid;
-border-width: 1px;
+  border: orange;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
 }
 
 .card {
-    flex: 1 0 0;
-    padding: 10px;
-    text-align: center;
-    border-style: solid;
-    border-width: 1px;
+  flex: 1 0 0;
+  padding: 10px;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
 }
-  
+
 .card header {
-    padding: 20px;
-    background: black;
-    color: #fff;
+  text-decoration: none;
+  color: orange;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
 }
-  
+
 .card img {
-    width: 100%;
-    min-width: 400px;
+  width: 100%;
+  min-width: 400px;
+  cursor: pointer;
 }
 
 p {
-    border: 2px solid orange;
-    margin: 50px;
+  border: 2px solid orange;
+  margin: 50px;
 }
 
 /* made background transparent and set the display as  flex and also added some padding */
-#nav{
-    background-color: transparent;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: right;
-    align-items: center;
-    padding: 40px20px0px20px;
-    width: 100%;
+#nav {
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  align-items: center;
+  padding: 40px20px0px20px;
+  width: 100%;
 }
 
 /*added font weight, size and letter spacing in nav p a tags*/
-header nav p a{
-    text-decoration: none;
-    color: orange;
-    cursor: pointer;
-    font-size: 25px;
-    font-weight: 700;
-    letter-spacing: 2px;
+header nav p a {
+  text-decoration: none;
+  color: orange;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
 }
 
 /* added display as flex and also added some column gap beside that I have also set a font size and weight and remove the list style*/
-header div ul{
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 50px;
-    list-style-type: none;
-    font-weight: 600;
-    
+header div ul {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 50px;
+  list-style-type: none;
+  font-weight: 600;
 }
 
 /* added a color to a tag under ul header and removed the text decoration also added hover and active color */
-header  nav ul a{
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-decoration: none;
-    color: white;
-} 
-
-header nav ul a:hover{
-    color:orange;
-    text-decoration: none;
+header nav ul a {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
 }
-header nav div ul:active{
-    color:orange;
+
+header nav ul a:hover {
+  color: orange;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header nav div ul:active {
+  color: orange;
 }
 
 /* dropdown */
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-workout-content {
-    display: none;
-    position: absolute;
-    background-color: /*rgba(212, 212, 212, 0.26)*/ black;
-    min-width: 110px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-workout-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-workout-content a:hover {background-color: #ddd;}
-  
-  /* Show the dropdown menu on hover */
-  .dropdown-workout:hover .dropdown-workout-content {
-    display: block;
-    margin-left: -10px;
-    /* text-align: center; */
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-workout-content {
+  display: none;
+  position: absolute;
+  background-color: /*rgba(212, 212, 212, 0.26)*/ black;
+  min-width: 110px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
-@media (max-width: 894px){
-    #nav{
-        justify-content: center;
-    }
+/* Links inside the dropdown */
+.dropdown-workout-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
 
-    header div ul{
-        justify-content: center;
-        row-gap: 15px;
-    }
+/* Change color of dropdown links on hover */
+.dropdown-workout-content a:hover {
+  background-color: #ddd;
+}
 
-    #main-section{
-        padding: 450px 0px 500px 0px;
-        margin-top: -220px;
-        /* background-position-x: -900px; */
-    }
+/* Show the dropdown menu on hover */
+.dropdown-workout:hover .dropdown-workout-content {
+  display: block;
+  margin-left: -10px;
+  /* text-align: center; */
+}
+
+@media (max-width: 894px) {
+  #nav {
+    justify-content: center;
+  }
+
+  header div ul {
+    justify-content: center;
+    row-gap: 15px;
+  }
+
+  #main-section {
+    padding: 450px 0px 500px 0px;
+    margin-top: -220px;
+    /* background-position-x: -900px; */
+  }
 }

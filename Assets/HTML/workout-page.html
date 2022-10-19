@@ -1,73 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <title>WORKOUTS</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel=“preconnect” href=“https://fonts.googleapis.com”>
-    <link rel=“preconnect” href=“https://fonts.gstatic.com” crossorigin>
-    <link href=“https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap” rel=“stylesheet”>
+    <link rel=“preconnect” href=“https://fonts.googleapis.com”> <link
+    rel=“preconnect” href=“https://fonts.gstatic.com” crossorigin> <link
+    href=“https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap”
+    rel=“stylesheet”>
+
     <link rel="stylesheet" type="text/css" href="..\CSS\workout-page.css" />
   </head>
 
   <body>
     <header class="main-header">
-      <h1>Workout Maker</h1>
+      <a href="#"><h1>GitUp.Now</h1></a>
       <nav id="nav">
-            <div id="ul">
-            <ul>
-                <li>
-                    <a href="..\HTML\about.html">About Us</a>
-                </li>
-                <li>
-                    <a href="#">Our Team</a>
-                </li>
-                <li class="dropdown-workout">
-                    <a href="#">Workouts</a>
-                    <div class="dropdown-workout-content">
-                        <a href="#">Chest</a>
-                        <a href="#">Back</a>
-                        <a href="#">Biceps</a>
-                        <a href="#">Triceps</a>
-                        <a href="#">Legs</a>
-                        <a href="#">Shoulders</a>
-                      </div>
-                </li>
-                <li>
-                    <a href="#"> Contact Us</a>
-                </li>
-            </ul>
-            </div>
-    </nav>
+        <div id="ul">
+          <ul>
+            <li>
+              <a href="/Assets/HTML/about.html">About Us</a>
+            </li>
+            <li>
+              <a href="#">Our Team</a>
+            </li>
+            <li class="dropdown-workout">
+              <a href="#">Workouts</a>
+              <div class="dropdown-workout-content">
+                <a href="#chest">Chest</a>
+                <a href="#back">Back</a>
+                <a href="#biceps">Biceps</a>
+                <a href="#triceps">Triceps</a>
+                <a href="#legs">Legs</a>
+                <a href="#shoulders">Shoulders</a>
+              </div>
+            </li>
+            <li>
+              <a href="#"> Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <main>
-      <section class="card">
-        <header>Workout 1</header>
+      <section id="chest" class="card">
+        <header>Chest</header>
         <p></p>
       </section>
-      <section class="card">
-        <header>Workout 2</header>
+      <section id="back" class="card">
+        <header>Back</header>
         <p></p>
       </section>
-      <section class="card">
-        <header>Workout 3</header>
+      <section id="biceps" class="card">
+        <header>Biceps</header>
         <p></p>
       </section>
-      <section class="card">
-        <header>Workout 4</header>
+      <section id="triceps" class="card">
+        <header>Triceps</header>
         <p></p>
       </section>
-      <section class="card">
-        <header>Workout 5</header>
+      <section id="legs" class="card">
+        <header>Legs</header>
         <p></p>
       </section>
-      <section class="card">
-        <header>Workout 6</header>
+      <section id="shoulders" class="card">
+        <header>Shoulders</header>
         <p></p>
       </section>
     </main>
-  </body>
 
+    <script src="/Assets/JS/workout-page.js"></script>
+  </body>
 </html>
