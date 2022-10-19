@@ -1,7 +1,11 @@
-// Stored a main section button, form section and close icon in a variable
+var starBtn = document.querySelector("#main-section-button");
 
-var starBtn=  document.querySelector("#main-section-button")
+var formSection = document.querySelector("#form-section");
 
+<<<<<<< HEAD
+var icon = document.querySelector("#close-icon");
+console.log(icon);
+=======
 var formSection= document.querySelector("#form-section");
 
 var icon= document.querySelector("#close-icon")
@@ -102,5 +106,16 @@ formBtn.addEventListener("click", function(event){
 
 
 })
+>>>>>>> 1d9be4fa7409c30e0f3ad4dd086fce6257b629ff
 
+starBtn.addEventListener("click", function () {
+  if (formSection.style.display === "flex") {
+    form.Section.style.display = "none";
+  } else {
+    formSection.style.display = "flex";
+  }
+});
 
+icon.addEventListener("click", function () {
+  formSection.setAttribute("style", "display:none;");
+});
