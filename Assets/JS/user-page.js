@@ -1,72 +1,68 @@
 // Variables for all the data stored in local storage
-var musclesChosen = JSON.parse(localStorage.getItem(`Muscle Group`));
-var userName = localStorage.getItem(`Full Name`);
-var userEmail = localStorage.getItem(`Email`);
+// var musclesChosen = JSON.parse(localStorage.getItem(`Muscle Group`));
+var musclesChosen = [`chest`, `back`];
 console.log(musclesChosen);
-console.log(userName);
-console.log(userEmail);
-
-// // Variables for the DOM elements
-// var nameEl = document.querySelector(`.username`);
-// var emailEl = document.querySelector(`.user-email`);
-// var goalEl = document.querySelector(`.goal`);
-
-// //Function to capitalize first and last name
-// function capitalizeString(str) {
-//   var splitStr = str.toLowerCase().split(" ");
-//   for (var i = 0; i < splitStr.length; i++) {
-//     splitStr[i] =
-//       splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
-//   }
-//   // Directly return the joined string
-//   return splitStr.join(" ");
-// }
-// // Display DOM variables
-// nameEl.innerText = capitalizeString(userName);
-
-//muscle variables for api calls
-var apiMuscleList = {
-  Chest: [`pectoralis%20major`],
-  Back: [`latissimus%20dorsi`],
-  Shoulders: [`deltoid`],
-  Biceps: [`biceps`],
-  Triceps: [`triceps`],
-  Legs: [`quadriceps`, `hamstrings`, `gluteus%20maximus`],
-};
-console.log(apiMuscleList.Chest);
 const options = {
   method: "GET",
   headers: {
     "X-RapidAPI-Key": "a2e2218b81msh172204e911c7de7p1a8ea0jsnc46101fc6953",
-    "X-RapidAPI-Host": "exerciseapi3.p.rapidapi.com",
+    "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
   },
 };
 
-function grabExercises() {
+function displayexercises() {
+  document.getElementById(`card-root`).innerHTML = ``;
   for (let i = 0; i < musclesChosen.length; i++) {
-    if (musclesChosen[i] === `Legs`) {
-      for (let x = 0; x < 3; x++) {
-        fetch(
-          `https://exerciseapi3.p.rapidapi.com/search/?primaryMuscle=${apiMuscleList.Legs[x]}`,
-          options
-        )
-          .then((response) => response.json())
-          .then((response) => console.log(response))
-          .catch((err) => console.error(err));
-      }
-    } else {
-      fetch(
-        `https://exerciseapi3.p.rapidapi.com/search/?primaryMuscle=${
-          apiMuscleList[musclesChosen[i]][0]
-        }`,
-        options
-      )
-        .then((response) => response.json())
-        .then((response) => console.log(response))
-        .catch((err) => console.error(err));
-    }
+    fetch(
+      `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${musclesChosen[i]}`,
+      options
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        for (let x = 0; x < 10; x++) {
+          var rootEl = document.getElementById(`card-root`);
+          var colEl = document.createElement(`div`);
+          colEl.classList.add(
+            `col-xs-12`,
+            `col-sm-12`,
+            `col-md-6`,
+            `col-lg-4`,
+            `col-xl-3`
+          );
+          var cardEl = document.createElement(`div`);
+          cardEl.classList.add(`card`, `h-100`, `card-custm`);
+          var gifEl = document.createElement(`img`);
+          gifEl.classList.add(`card-img-top`);
+          gifEl.src = data[x][`gifUrl`];
+          var cardbodEl = document.createElement(`div`);
+          cardbodEl.classList.add(`card-body`);
+          var cardTitleEl = document.createElement(`h4`);
+          cardTitleEl.classList.add(`card-title`);
+          cardTitleEl.innerText =
+            data[x][`name`].charAt(0).toUpperCase() + data[x][`name`].slice(1);
+          var cardTextEl = document.createElement(`h5`);
+          cardTextEl.classList.add(`card-text`);
+          cardTextEl.innerText = `Body Part: ${
+            data[x][`bodyPart`].charAt(0).toUpperCase() +
+            data[x][`bodyPart`].slice(1)
+          }`;
+          var cardText2El = document.createElement(`h5`);
+          cardText2El.classList.add(`card-text`);
+          cardText2El.innerText = `Equipment: ${
+            data[x][`equipment`].charAt(0).toUpperCase() +
+            data[x][`equipment`].slice(1)
+          }`;
+          //Append
+          rootEl.appendChild(colEl);
+          colEl.appendChild(cardEl);
+          cardEl.appendChild(gifEl);
+          cardEl.appendChild(cardbodEl);
+          cardbodEl.appendChild(cardTitleEl);
+          cardbodEl.appendChild(cardTextEl);
+          cardbodEl.appendChild(cardText2El);
+        }
+      })
+      .catch((err) => console.error(err));
   }
 }
-grabExercises(musclesChosen);
-console.log(musclesChosen[0]);
-console.log(apiMuscleList.Legs[0]);
+displayexercises();

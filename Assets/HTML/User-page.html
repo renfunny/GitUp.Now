@@ -34,7 +34,7 @@
       <header>
         <nav id="nav">
           <div>
-            <p><a href="#">Workout Maker</a></p>
+            <p><a href="/index.html">Workout Maker</a></p>
           </div>
           <div id="ul">
             <ul>
@@ -45,7 +45,7 @@
                 <a href="#"> Our Team</a>
               </li>
               <li class="dropdown-workout">
-                <a href="#">Workouts</a>
+                <a href="/Assets/HTML/User-page.html">Workouts</a>
                 <div class="dropdown-workout-content">
                   <a href="#">Chest</a>
                   <a href="#">Back</a>
@@ -62,7 +62,7 @@
           </div>
         </nav>
       </header>
-      <section class="profile">
+      <!-- <section class="profile">
         <div class="wrapper">
           <img
             class="user-profile-picture"
@@ -81,79 +81,14 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section class="workout-made">
-        <h2 class="workout-title">Workout:</h2>
-        <div class="row row-cols-1 row-cols-md-3 g-4 card-custom">
-          <div class="col">
-            <div class="card h-100 card-custm">
-              <span class="close close-custm">x</span>
-              <iframe
-                src="https://www.youtube.com/embed/tgbNymZ7vqY"
-                class="card-img-top"
-              >
-              </iframe>
-              <div class="card-body">
-                <h5 class="card-title">Exercise Name</h5>
-                <ul>
-                  <li>Target Muscle</li>
-                  <li>Dificulty</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 card-custm">
-              <span class="close close-custm">x</span>
-              <iframe
-                src="https://www.youtube.com/embed/tgbNymZ7vqY"
-                class="card-img-top"
-              >
-              </iframe>
-              <div class="card-body">
-                <h5 class="card-title">Exercise Name</h5>
-                <ul>
-                  <li>Target Muscle</li>
-                  <li>Dificulty</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 card-custm">
-              <span class="close close-custm">x</span>
-              <iframe
-                src="https://www.youtube.com/embed/tgbNymZ7vqY"
-                class="card-img-top"
-              >
-              </iframe>
-              <div class="card-body">
-                <h5 class="card-title">Exercise Name</h5>
-                <ul>
-                  <li>Target Muscle</li>
-                  <li>Dificulty</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 card-custm">
-              <span class="close close-custm">x</span>
-              <iframe
-                src="https://www.youtube.com/embed/tgbNymZ7vqY"
-                class="card-img-top"
-              >
-              </iframe>
-              <div class="card-body">
-                <h5 class="card-title">Exercise Name</h5>
-                <ul>
-                  <li>Target Muscle</li>
-                  <li>Dificulty</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+        <h2 class="workout-title">Exercises:</h2>
+        <div
+          class="row row-cols-1 row-cols-md-3 g-4 card-custom"
+          id="card-root"
+        ></div>
       </section>
     </main>
     <script
@@ -161,14 +96,6 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
-    <script>
-      
-      var closebtns = document.querySelectorAll(`.close`)
-      for(let i = 0; i<closebtns.length; i++){
-        closebtns[i].addEventListener(`click`, function(){
-this.parentElement.style.display = `none`;
-        })
-      }
-    </script>
+    <script src="/Assets/JS/user-page.js"></script>
   </body>
 </html>
