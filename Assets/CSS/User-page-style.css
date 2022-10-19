@@ -21,6 +21,11 @@ header nav p a {
   font-size: 25px;
   font-weight: 700;
   letter-spacing: 2px;
+  text-decoration: none !important;
+}
+
+header nav p a:hover {
+  color: orange;
 }
 
 /* added display as flex and also added some column gap beside that I hav ealso set a font size and weight and remove the liste style */
@@ -118,8 +123,9 @@ iframe {
 }
 #card-root {
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
+  margin-left: 0;
 }
 .card-title {
   color: black;
