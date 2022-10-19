@@ -98,7 +98,7 @@ formBtn.addEventListener("click", function (event) {
       emailInput.setAttribute("placeholder", "Enter your email address");
       
 }else{
-  document.location.href="../Assets/HTML/workout-page.html";
+  document.location.href="../Assets/HTML/User-page.html";
       return true;
 }
      }
