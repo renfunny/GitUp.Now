@@ -110,8 +110,9 @@ header nav div ul:active{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 300px 0px 440px 0px;
+    padding: 400px 0px 540px 0px;
     margin-top: -100px;
+    height: 150vh;
 }
 
 /*added color to the h1 heading and change the font-weight, size letter, spacing*/
@@ -147,13 +148,14 @@ header nav div ul:active{
     width: 50%;
     left: 25%;
     position: absolute;
-    bottom: 15%;
+    bottom: 0%;
     background-color: black;
     display: none;
     flex-direction: column;
     align-items: center;
     color: white;
     padding: 80px 30px 100px 30px;
+    margin-bottom: -250px;
 }
 
 h2{
@@ -240,8 +242,8 @@ input[ type=checkbox]{
     position: sticky;
     bottom: 100%;
     left: 100%;
-    margin-top: -70px;
-    margin-right: -17px;
+    margin-top: -34px;
+    margin-right: -5px;
     z-index: 10;
 }
 
@@ -250,9 +252,20 @@ input[ type=checkbox]{
 }
 /*Added some media queries to make it mobile responsive*/
 
+@media (max-width: 1051px){
+    #form-section{
+        bottom: 2%;
+    }
+
+    .checkbox-div{
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+}
+
 @media (width: 912px){
     #main-section{
-        height: 1400px;
+        height: 150vh;
         padding: 0px;
     }
 }
@@ -268,9 +281,14 @@ input[ type=checkbox]{
     }
 
     #main-section{
-        padding: 450px 0px 500px 0px;
+        padding: 650px 0px 600px 0px;
         margin-top: -220px;
+        height: 150vh;
         /* background-position-x: -900px; */
+    }
+
+    #form-section{
+        margin-bottom: -230px;
     }
 }
 
@@ -300,22 +318,19 @@ header div ul{
 }
 } */
 
-@media (max-width: 1051px){
-    #form-section{
-        bottom: 2%;
-    }
 
-    .checkbox-div{
-        align-items: flex-start;
-        justify-content: flex-start;
-    }
-}
+
+
 @media (max-width: 691px){
+
+    #main-section{
+        height: 200vh ;
+    }
     #form-section{
         width:70%;
         left: 15%;
-        bottom: 2%;
-        margin-bottom: -4%;
+        bottom: 0%;
+        margin-bottom: -77%;
     }
 
     /* .checkbox-div{
@@ -336,7 +351,7 @@ header div ul{
 
 @media (max-width:454px){
     #form-section {
-        margin-bottom: -210px;
+        margin-bottom: -573px;
 }
 
 @media (max-width:355px){
@@ -351,16 +366,20 @@ header div ul{
     }
 
     #form-section{
-        margin-bottom: -189px;
+        margin-bottom: -350px;
     }
 }
 
 @media (max-width:325px){
+
+    #main-section{
+        padding: 550px 0px 500px 0px;
+    }
     #mark{
         font-size: 35px ;
     }
 
     #form-section{
-        margin-bottom: -216px ;
+        margin-bottom: -616px ;
     }
 }
