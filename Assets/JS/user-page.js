@@ -1,6 +1,5 @@
 // Variables for all the data stored in local storage
 var musclesChosen = JSON.parse(localStorage.getItem(`Muscle Group`));
-console.log(musclesChosen);
 const options = {
   method: "GET",
   headers: {
@@ -11,6 +10,7 @@ const options = {
 
 function displayexercises() {
   document.getElementById(`card-root`).innerHTML = ``;
+  musclesChosen = JSON.parse(localStorage.getItem(`Muscle Group`));
   for (let i = 0; i < musclesChosen.length; i++) {
     fetch(
       `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${musclesChosen[i]}`,
@@ -65,3 +65,15 @@ function displayexercises() {
   }
 }
 displayexercises();
+
+var dropdownEl = document.querySelectorAll(`.dropdown-body-part`);
+for (let i = 0; i < dropdownEl.length; i++) {
+  dropdownEl[i].addEventListener(`click`, function () {
+    var muscle = [`${this.innerText.toLowerCase()}`];
+    musclesChosen = localStorage.setItem(
+      `Muscle Group`,
+      JSON.stringify(muscle)
+    );
+    displayexercises();
+  });
+}
