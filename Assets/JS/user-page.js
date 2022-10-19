@@ -1,6 +1,5 @@
 // Variables for all the data stored in local storage
-// var musclesChosen = JSON.parse(localStorage.getItem(`Muscle Group`));
-var musclesChosen = [`chest`, `back`];
+var musclesChosen = JSON.parse(localStorage.getItem(`Muscle Group`));
 console.log(musclesChosen);
 const options = {
   method: "GET",
