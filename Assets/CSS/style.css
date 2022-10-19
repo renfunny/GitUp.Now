@@ -184,11 +184,21 @@ input{
     padding-left: 5px;
 }
 
+
+#main-check-box-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   column-gap: 60px;
+   flex-wrap: wrap;
+}
+
 .checkbox-div{
     display: flex;
+    flex-direction: column;
     column-gap: 80px;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 

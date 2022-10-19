@@ -25,37 +25,43 @@
   </head>
   <body>
     <main id="main-container">
-      <header>
-        <nav id="nav">
-          <div>
-            <p><a href="#">Workout Maker</a></p>
-          </div>
-          <!-- <div id="drop-nav"> -->
-          <div id="ul">
-            <ul>
-              <li>
-                <a href="#">About Us</a>
-              </li>
-              <li>
-                <a href="#"> Our Team</a>
-              </li>
-              <li class="dropdown-workout">
-                <a href="#">Workouts</a>
-                <div class="dropdown-workout-content">
-                  <a href="#">Chest</a>
-                  <a href="#">Back</a>
-                  <a href="#">Biceps</a>
-                  <a href="#">Triceps</a>
-                  <a href="#">Legs</a>
-                  <a href="#">Shoulders</a>
+
+        <header>
+            <nav id="nav">
+                <div>
+                <p><a  id= "logo" href="#">Git Up Now</a></p>
                 </div>
-              </li>
-              <li>
-                <a href="#"> Contact Me</a>
-              </li>
-            </ul>
-          </div>
-          <!-- 
+                <!-- <div id="drop-nav"> -->
+                    <div id="ul">
+                    <ul>
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#"> Our Team</a>
+                        </li>
+                        <li class="dropdown-workout">
+                            <a href="#">Workouts</a>
+                            <div class="dropdown-workout-content">
+                                <a href="#">Chest</a>
+                                <a href="#">Back</a>
+                                <a href="#">Lower Arms</a>
+                                <a href="#">Upper Arms</a>
+                                <a href="#">Lower Legs</a>
+                                <a href="#">Upper Legs</a>
+                                <a href="#">Shoulders</a>
+                                <a href="#">Cardio</a>
+                                <a href="#">Neck</a>
+                                <a href="#">Waist</a>
+                              </div>
+                        </li>
+                        <li>
+                            <a href="#"> Contact Me</a>
+                        </li>
+                    </ul>
+                    </div>
+<!-- 
+
                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                         <i class="fa fa-bars"></i> -->
 
@@ -77,42 +83,104 @@
     </main>
 
     <section id="form-section">
-      <div id="heading-Two-Div">
-        <h2>
-          Please Fill Out The Following Information To
-          <mark
-            style="
-              color: orange;
-              background-color: transparent;
-              font-size: 40px;
-              font-weight: 700;
-            "
-            >Get Started</mark
-          >
-        </h2>
-      </div>
-      <div id="form-div">
-        <form>
-          <div id="name-input-div" class="input-fields-div">
-            <label>Full Name</label>
-            <input type="text" name="full name" />
-          </div>
 
-          <div id="email-input-div" class="input-fields-div">
-            <label>Email ADDRESS</label>
-            <input type="email" name="email" />
-          </div>
+        <div id="heading-Two-Div">
+            <h2>Please Fill Out The Following Information To <mark style="color:orange; background-color: transparent; font-size: 40px; font-weight: 700;">Get Started</mark></h2>
+        </div>
+        <div id="form-div">
+            <form>
+                <div id="name-input-div" class="input-fields-div">
+                <label for="name-input">Full Name</label>
+                <input id="name-input" type="text" name="full name" required>
+            </div>
 
-          <div id="muscle-input-div" class="input-fields-div">
-            <label>What Muscle Group Would You Like To target?</label>
-            <input type="text" name="msucle input" />
-          </div>
+            <div id="email-input-div" class="input-fields-div">
+                <label for="email-input">Email Address</label>
+                <input id="email-input" type="email" name="email" required>
+            </div>
 
-          <div id="form-btn-div" class="input-fields-div">
-            <button type="submit" id="form-btn">Submit</button>
-          </div>
-        </form>
-      </div>
+            <div id="muscle-input-div" class="input-fields-div" >
+                <label>What Muscle Group Would You Like To Target?</label>
+
+                <div id = main-checkbox-div>
+                
+                <div class="checkbox-div" >
+                    <div class="checkbox-input-div">
+                        <input type="checkbox" name="msucle input" id="chest" class="checkbox-value" value="chest"><label class="label" for="chest">Chest</label>
+                    </div>
+
+                    <div class="checkbox-input-div">
+                        <input type="checkbox" name="msucle input" id="back" class="checkbox-value" value="back"><label class="label" for="back">Back</label>
+                    </div>
+
+                    <div class="checkbox-input-div">
+                        <input type="checkbox" name="msucle input" id="lower-arms" class="checkbox-value" value="lower arms"><label class="label" for="lower-arms">Lower Arms</label>
+                    </div>
+
+                    <div class="checkbox-input-div">
+                        <input type="checkbox" name="msucle input" id="upper Arms" class="checkbox-value" value="upper arms"><label class="label" for="upper arms">Upper Arms</label>
+                    </div>
+                 </div>
+
+                <div class="checkbox-div">
+
+                    <div class="checkbox-input-div">
+                        <input type="checkbox" name="msucle input" id="lower-legs" class="checkbox-value" value="lower legs"><label class="label" for="lower-legs">Lower Legs</label>
+                    </div>
+
+                    <div class="checkbox-input-div">
+                        <input type="checkbox" name="msucle input" id="upper-legs" class="checkbox-value" value="upper legs"><label class="label" for="upper-legs">Upper Legs</label>
+                    </div>
+
+                    <div class="checkbox-input-div">
+                        <input type="checkbox" name="msucle input" id="shoulders" class="checkbox-value" value="shoulders"><label class="label" for="shoulders">Shoulders</label>
+                    </div>
+
+                    <div class="checkbox-input-div">
+                        <input type="checkbox" name="msucle input" id="cadio" class="checkbox-value" value="cardio"><label class="label" for="cardio">Cardio</label>
+                    </div>
+
+                </div>
+
+                <div class="checkbox-div">
+                
+                    <div class="checkbox-input-div">
+                        <input type="checkbox" name="msucle input" id="waist" class="checkbox-value" value="waist"><label class="label" for="waist">Waist</label>
+                    </div>
+
+                    <div class="checkbox-input-div">
+                        <input type="checkbox" name="msucle input" id="neck" class="checkbox-value" value="neck"><label class="label" for="neck">Neck</label>
+                    </div>
+
+                </div>
+
+                </div>
+
+                <!-- <div class="checkbox-div">
+                
+                   
+
+                    <div class="checkbox-input-div">
+                        
+                    </div>
+
+                    <div class="checkbox-input-div">
+                        
+                    </div>
+
+                </div> -->
+                
+             </div>
+
+            <div id="form-btn-div" class="input-fields-div">
+                <button type="submit" id="form-btn">Submit</button>
+            </div>
+
+            </form>
+
+        </div>
+        
+        <div id="icon-div">
 
       <div id="icon-div">
         <a href="javascript:void(0);" class="icon">
