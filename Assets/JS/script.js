@@ -42,7 +42,7 @@ var formBtn = document.querySelector("#form-btn");
 
 //created an click event listener for storing input value in local storage
 formBtn.addEventListener("click", function (event) {
-  // event.preventDefault();
+  event.preventDefault();
 
   var nameInput = document.querySelector("#name-input");
   localStorage.setItem("Full Name", nameInput.value);
@@ -92,10 +92,16 @@ formBtn.addEventListener("click", function (event) {
 
   //    error();
 
-  //    function redirect(){
+     function redirect(){
+    if( nameInput.value ==0 || emailInput.value == 0){
+      nameInput.setAttribute("placeholder","Fill Your Name");
+      emailInput.setAttribute("placeholder", "Enter your email address");
+      
+}else{
+  document.location.href="../Assets/HTML/workout-page.html";
+      return true;
+}
+     }
 
-  //     location.replace("https://www.google.com");
-  //    }
-
-  //    redirect();
+     redirect();
 });
