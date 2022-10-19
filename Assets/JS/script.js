@@ -2,8 +2,111 @@ var starBtn = document.querySelector("#main-section-button");
 
 var formSection = document.querySelector("#form-section");
 
+<<<<<<< HEAD
 var icon = document.querySelector("#close-icon");
 console.log(icon);
+=======
+var formSection= document.querySelector("#form-section");
+
+var icon= document.querySelector("#close-icon")
+// console.log(icon);
+
+// Created a click event listener on start btn with a if statemnet.
+starBtn.addEventListener("click", function(){
+    if(formSection.style.display === "flex"){
+        form.Section.style.display="none";
+    }else{
+        formSection.style.display="flex";
+    }
+})
+
+//Create an empty array
+var muscleArr=[];
+
+//created a function in which we are storing checked checkbox or checkboxes value into the muscleArr array. 
+function ap(chest){
+var chest= document.querySelectorAll(".checkbox-value:checked");
+
+for(var i=0; i<chest.length; i++){
+
+    muscleArr.push(chest[i].value);
+}
+console.log(chest);
+console.log(muscleArr);
+}
+
+//Created an click event listener for closing the form
+icon.addEventListener("click", function(){
+    formSection.setAttribute("style","display:none;");
+})
+
+//Storing form submit btn in a variable
+var formBtn= document.querySelector("#form-btn");
+
+//created an click event listener for storing input value in local storage
+formBtn.addEventListener("click", function(event){
+    // event.preventDefault();
+
+    var nameInput= document.querySelector("#name-input")
+    localStorage.setItem("Full Name",nameInput.value);
+    var localGetName= localStorage.getItem("full Name")
+    var emailInput= document.querySelector("#email-input")
+    localStorage.setItem("Email",emailInput.value);
+
+    var localGetEmail= localStorage.getItem("email");
+
+    //calling function
+    ap(chest);
+
+    localStorage.setItem("Muscle Group", JSON.stringify(muscleArr));
+    var localGetCheckbox= JSON.parse(localStorage.getItem("Muscle Group"));
+
+
+//    function error(){
+//     if(nameInput.value= " "){
+
+//         var nameInputDiv = document.getElementById("name-input-div")
+//         var nameError= document.createElement("p");
+//         nameError.innerHTML="Please Fill you full name";
+    
+//         nameInputDiv.appendChild(nameError);
+//         console.log(nameError);
+    
+//         }
+        
+        
+//         if(emailInput.value= " " || emailInput.value == !includes("@") ){
+ 
+//         var emailInputDiv= document.getElementById("email-input-div");
+
+//         var emailError=  document.createElement("p");
+
+//         emailError.innerHTML="Please fill your proper email Address"
+
+//         emailInputDiv.appendChild(emailError);
+//     }else{
+//         var checkboxDiv= document.querySelector(".checkboxDiv");
+//         var successMsg= document.createElement("p");
+//         successMsg.innerHTML="Your Form is Successfully Submit";
+
+//         checkboxDiv.appendChild(successMsg);
+
+//         console.log(successMsg);
+//     }
+//    }
+
+//    error();
+
+//    function redirect(){
+
+//     location.replace("https://www.google.com");
+//    }
+
+//    redirect();
+
+
+})
+>>>>>>> 1d9be4fa7409c30e0f3ad4dd086fce6257b629ff
 
 starBtn.addEventListener("click", function () {
   if (formSection.style.display === "flex") {
