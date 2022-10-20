@@ -92,16 +92,15 @@ formBtn.addEventListener("click", function (event) {
 
   //    error();
 
-     function redirect(){
-    if( nameInput.value ==0 || emailInput.value == 0){
-      nameInput.setAttribute("placeholder","Fill Your Name");
+  function redirect() {
+    if (nameInput.value == 0 || emailInput.value == 0) {
+      nameInput.setAttribute("placeholder", "Fill Your Name");
       emailInput.setAttribute("placeholder", "Enter your email address");
-      
-}else{
-  document.location.href="../Assets/HTML/User-page.html";
+    } else {
+      document.location.href = "./HTML/User-page.html";
       return true;
-}
-     }
+    }
+  }
 
-     redirect();
+  redirect();
 });
