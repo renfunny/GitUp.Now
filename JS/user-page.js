@@ -3,7 +3,7 @@ var musclesChosen = JSON.parse(localStorage.getItem(`Muscle Group`));
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "a2e2218b81msh172204e911c7de7p1a8ea0jsnc46101fc6953",
+    "X-RapidAPI-Key": "f00967f704mshcdc1a904b456533p1d9212jsn0bb094eab6a5",
     "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
   },
 };

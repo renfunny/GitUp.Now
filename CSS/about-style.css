@@ -248,22 +248,21 @@ img.icon-GitHub {
   font-size: 16px;
 }
 
-@media (max-width: 894px){
-  #nav{
-      justify-content: center;
-      flex-direction: column;
+@media (max-width: 894px) {
+  #nav {
+    justify-content: center;
+    flex-direction: column;
   }
 }
 
 @media (max-width: 691px) {
-
-  header div ul{
-    justify-content: center;
-  }
   .containers {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+  }
+  header div ul {
+    justify-content: center;
   }
 }
 /*
